@@ -1,0 +1,178 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true"
+    CodeBehind="Admin.master.cs"
+    Inherits="Attendence_System.Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Admin Panel</title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+
+<body>
+
+<form id="form1" runat="server">
+
+<div>
+
+    <table align="center">
+
+        <!-- Header -->
+        <tr style="width:1200px;height:150px;">
+            <td>
+                <asp:Image ID="Image1"
+                    runat="server"
+                    ImageUrl="~/Images1/student_management.png"
+                    Width="1200px"
+                    Height="150px"
+                    BorderWidth="3px"
+                    BorderColor="#666666" />
+            </td>
+        </tr>
+
+        <!-- Menu -->
+        <tr style="width:1200px;height:60px;"
+            bgcolor="#c547ff">
+
+            <td>
+
+                <table align="center" cellpadding="8">
+
+                    <tr>
+
+                        <td>
+                            <asp:Button
+                                ID="btnCourse"
+                                runat="server"
+                                Text="Course"
+                                Width="170px"
+                                Height="49px"
+                                Font-Bold="True"
+                                Font-Size="Medium"
+                                BackColor="Snow"
+                                BorderColor="#666666"
+                                CausesValidation="False"
+                                OnClick="Course_Click" />
+                        </td>
+
+                        <td></td>
+                        <td></td>
+
+                        <td>
+                            <asp:Button
+                                ID="btnSubject"
+                                runat="server"
+                                Text="Subject"
+                                Width="170px"
+                                Height="49px"
+                                Font-Bold="True"
+                                Font-Size="Medium"
+                                BackColor="Snow"
+                                BorderColor="#666666"
+                                CausesValidation="False"
+                                OnClick="Subject_Click" />
+                        </td>
+
+                        <td></td>
+                        <td></td>
+
+                        <td>
+                            <asp:Button
+                                ID="btnTeacher"
+                                runat="server"
+                                Text="Teacher"
+                                Width="170px"
+                                Height="49px"
+                                Font-Bold="True"
+                                Font-Size="Medium"
+                                BackColor="Snow"
+                                BorderColor="#666666"
+                                CausesValidation="False"
+                                OnClick="Teacher_Click" />
+                        </td>
+
+                        <td></td>
+                        <td></td>
+
+                        <td>
+                            <asp:Button
+                                ID="btnAssignSubject"
+                                runat="server"
+                                Text="Assign Subject"
+                                Width="170px"
+                                Height="49px"
+                                Font-Bold="True"
+                                Font-Size="Medium"
+                                BackColor="Snow"
+                                BorderColor="#666666"
+                                CausesValidation="False"
+                                OnClick="AssignSubject_Click" />
+                        </td>
+
+                        <td></td>
+                        <td></td>
+
+                        <td>
+                            <asp:Button
+                                ID="btnLogout"
+                                runat="server"
+                                Text="Logout"
+                                Width="170px"
+                                Height="49px"
+                                Font-Bold="True"
+                                Font-Size="Medium"
+                                BackColor="Snow"
+                                BorderColor="#666666"
+                                CausesValidation="False"
+                                OnClick="Logout_Click" />
+                        </td>
+
+                    </tr>
+
+                </table>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+    <!-- Page Content -->
+    <asp:ContentPlaceHolder
+        ID="ContentPlaceHolder1"
+        runat="server">
+    </asp:ContentPlaceHolder>
+
+    <!-- Footer -->
+    <table align="center" width="1200">
+
+        <tr bgcolor="Gray">
+
+            <td style="height:25px;text-align:center;color:white;">
+
+                &copy;
+                <asp:Label
+                    ID="Label1"
+                    runat="server"
+                    Text="Attendance System"
+                    ForeColor="White"
+                    Font-Bold="True"
+                    Font-Size="Medium">
+                </asp:Label>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+</div>
+
+</form>
+
+</body>
+</html>
